@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "configurations": [
+        {
+            "name": "C++ Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,  // Set to true to use external terminal
+            "MIMode": "lldb",  // For macOS and Linux (use "gdb" for Windows)
+            "miDebuggerPath": "/usr/bin/lldb",  // Ensure correct debugger path
+            "preLaunchTask": "build",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
